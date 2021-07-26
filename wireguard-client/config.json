@@ -1,9 +1,10 @@
+
 {
    "name":"WireGuard Client",
-   "version":"0.1.7",
+   "version":"0.2.0",
    "slug":"wireguard_client",
    "description":"Fast, modern, secure Wireguard tunnel (client)",
-   "url":"https://github.com/bigmoby/addon-wireguard-client",
+   "url":"https://github.com/asmaps/addon-wireguard-client",
    "arch":[
       "aarch64",
       "amd64",
@@ -16,12 +17,10 @@
    "init":false,
    "full_access": false,
    "ports":{
-      "80/tcp": null,
-      "51820/udp": 51820
+      "8080/tcp": null
    },
    "ports_description":{
-      "80/tcp": "WireGuard client status API",
-      "51820/udp":"WireGuard: forward this port in your router"
+      "8080/tcp": "WireGuard client status API"
    },
    "hassio_api":true,
    "privileged":[
@@ -33,8 +32,10 @@
    ],
    "options":{
       "interface":{
-         "private_key": "password?",
-         "address": "10.6.0.2",
+         "private_key": "",
+         "address":[
+            "10.6.0.2/24"
+         ]
          "dns":[
             "8.8.8.8",
             "8.8.4.4"
@@ -56,12 +57,14 @@
       "log_level":"list(trace|debug|info|notice|warning|error|fatal)?",
       "interface":{
          "private_key": "password?",
-         "address": "str",
-         "dns":[
+         "address": [
             "str"
          ],
-         "post_up": "str",
-         "post_down": "str"
+         "dns?":[
+            "str"
+         ],
+         "post_up": "str?",
+         "post_down": "str?"
       },
       "peer":{
          "public_key":"str?",
@@ -72,6 +75,5 @@
          ],
          "persistent_keep_alive":"int"
       }
-   },
-   "image": "bigmoby/{arch}-addon-wireguard-client"
+   }
  }
