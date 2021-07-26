@@ -1,5 +1,5 @@
 {
-    "name":"Home Assistant Bigmoby Add-ons",
-    "url":"https://github.com/bigmoby/hassio-repository-addon",
-    "maintainer":"Fabio Bigmoby Mauro <https://github.com/bigmoby>"
+    "name":"Home Assistant Native Add-ons",
+    "url":"https://github.com/asmaps/hassio-repository-addon",
+    "maintainer":"Native Exception <https://github.com/asmaps>"
 }
