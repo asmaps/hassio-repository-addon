@@ -1,10 +1,9 @@
-
 {
    "name":"WireGuard Client",
    "version":"0.2.0",
    "slug":"wireguard_client",
    "description":"Fast, modern, secure Wireguard tunnel (client)",
-   "url":"https://github.com/asmaps/addon-wireguard-client",
+   "url":"https://github.com/asmaps/hassio-repository-addon",
    "arch":[
       "aarch64",
       "amd64",
@@ -35,7 +34,7 @@
          "private_key": "",
          "address":[
             "10.6.0.2/24"
-         ]
+         ],
          "dns":[
             "8.8.8.8",
             "8.8.4.4"
